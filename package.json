@@ -1,0 +1,19 @@
+{
+  "name": "morning-agentic-task-screener",
+  "version": "1.0.0",
+  "description": "Morning interview system to identify tasks that can be delegated to AI agents",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx serve . -p 3000"
+  },
+  "keywords": [
+    "ai",
+    "agents",
+    "task-automation",
+    "productivity",
+    "interview-system"
+  ],
+  "author": "",
+  "license": "MIT"
+}

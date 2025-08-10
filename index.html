@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Morning Agentic Interview</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Left Panel - Interview -->
+        <div class="interview-panel">
+            <div class="interview-header">
+                <div class="interview-title">
+                    <span>☕</span>
+                    <span>Morning Interview</span>
+                </div>
+                <div class="interview-subtitle">
+                    Let's find what we can delegate to agents today
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressBar" style="width: 10%"></div>
+                </div>
+            </div>
+
+            <div class="chat-area" id="chatArea">
+                <!-- Messages will be added here -->
+            </div>
+
+            <div class="input-area">
+                <div class="quick-actions" id="quickActions">
+                    <!-- Quick actions will be added dynamically -->
+                </div>
+                <div class="input-container">
+                    <textarea 
+                        class="input-field" 
+                        id="userInput" 
+                        placeholder="Type your response..."
+                        rows="1"
+                    ></textarea>
+                    <button class="send-btn" id="sendBtn" onclick="interview.handleUserInput()">
+                        Send
+                        <span>→</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Panel - Tasks & Commands -->
+        <div class="tasks-panel">
+            <div class="tasks-header">
+                <div class="tasks-title">🎯 Discovered Tasks</div>
+                <div class="stats-row">
+                    <div class="stat">
+                        <div class="stat-value" id="taskCount">0</div>
+                        <div class="stat-label">Tasks Found</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" id="commandCount">0</div>
+                        <div class="stat-label">Commands Ready</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-value" id="timeEstimate">0m</div>
+                        <div class="stat-label">Time Saved</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tasks-container" id="tasksContainer">
+                <div class="empty-state">
+                    <div class="empty-icon">🤖</div>
+                    <div>No tasks discovered yet</div>
+                    <div style="font-size: 0.875rem; margin-top: 0.5rem;">
+                        Answer the questions to identify agentic opportunities
+                    </div>
+                </div>
+            </div>
+
+            <div class="command-output" id="commandOutput" style="display: none;">
+                <div class="output-header">
+                    <div class="output-title">📋 Claude Code Commands</div>
+                    <button class="copy-btn" onclick="interview.copyCommands()">
+                        Copy All
+                    </button>
+                </div>
+                <div class="command-text" id="commandText">
+                    <!-- Commands will appear here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="focus-mode" id="focusMode">
+        🎯 Focus Mode Active
+    </div>
+
+    <script src="js/interview.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
